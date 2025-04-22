@@ -2,6 +2,7 @@ import type { NextRequest } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { codeBlock, oneLine } from 'common-tags'
 import GPT3Tokenizer from 'gpt3-tokenizer'
+
 import {
   Configuration,
   OpenAIApi,
@@ -9,6 +10,7 @@ import {
   CreateEmbeddingResponse,
   ChatCompletionRequestMessage,
 } from 'openai-edge'
+
 import { OpenAIStream, StreamingTextResponse } from 'ai'
 import { ApplicationError, UserError } from '@/lib/errors'
 
@@ -19,6 +21,7 @@ const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY
 const config = new Configuration({
   apiKey: openAiKey,
 })
+
 const openai = new OpenAIApi(config)
 
 export const runtime = 'edge'
