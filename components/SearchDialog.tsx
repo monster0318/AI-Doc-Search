@@ -2,6 +2,7 @@
 
 import * as React from 'react'
 import { Button } from '@/components/ui/button'
+
 import {
   Dialog,
   DialogContent,
@@ -10,9 +11,11 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog'
+
 import { Input } from '@/components/ui/input'
 import { useCompletion } from 'ai/react'
 import { X, Loader, User, Frown, CornerDownLeft, Search, Wand } from 'lucide-react'
+
 
 export function SearchDialog() {
   const [open, setOpen] = React.useState(false)
